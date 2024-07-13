@@ -1,0 +1,9 @@
+1) Installing Python & Django:
+  - it is a python framework
+  - python3 -m pip install Django
+2) TO CREATE A DJANGO PROJECT:
+  - django-admin startproject mypage
+3) To run the file:
+  - python3 manage.py runserver to start a server
+4) To create a appS inside this project:
+  - python3 manage.py startapp challenges

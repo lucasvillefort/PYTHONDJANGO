@@ -1,0 +1,8 @@
+1 - django-admin startproject my_site
+2 - python3 manage.py startapp blog
+3 - settings.py:
+   -> STATICFILES_DIRS = [BASE_DIR / "static"
+   ->  TEMPLATES = [{ "DIRS": [BASE_DIR / "templates"],....}]
+   -> INSTALLED_APPS = ["blog"...]
+
+4 - put the path and wear include at urls.py in my_site to link with urls.py of blog 
