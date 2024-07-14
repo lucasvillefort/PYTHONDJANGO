@@ -14,3 +14,9 @@
     - python3 manage.py makemigrations
 7 - after have created migrations we need to do the following:
     - python3 manage.py migrate
+8 - after migrate:
+    - python manager.py shell
+
+    8.1:
+        from book_outlet.models import Book
+        Book.objects.all()[0]
