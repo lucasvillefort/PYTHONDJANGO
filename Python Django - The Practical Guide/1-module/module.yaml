@@ -10,7 +10,7 @@
 5 - put the new app created into the main settings:
     - INSTALLED_APPS = [
     	"book_outlet",...]
-6 - after creating a model we need to active migrations:
+6 - after creating a model we need to active migrations: these moderls will be to create values to sqlite
     - python3 manage.py makemigrations
 7 - after have created migrations we need to do the following:
     - python3 manage.py migrate
@@ -18,5 +18,7 @@
     - python manager.py shell
 
     8.1:
+    1- CREATING A INSTANCE:
         from book_outlet.models import Book
-        Book.objects.all()[0]
+        Book.objects.create(title="harry poter", rating=5, author"jK, isbestselling=True)
+        Book.objects.get(is_bestselling=True) => filter by bestselling
