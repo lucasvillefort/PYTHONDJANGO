@@ -5,7 +5,10 @@
 <div>
     <ul>
         {% for book in books%}
-        <li>{{book.title}} (rating: {{book.rating}})</li>
+        <li>
+            <!-- href="{% url 'book-detail' book.id %}" or -->
+            <a href="{{book.get_absolute_url}}">{{book.title}}</a> (rating: {{book.rating}})
+        </li>
         {% endfor %}
     </ul>
 </div>

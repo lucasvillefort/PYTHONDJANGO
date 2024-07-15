@@ -1,11 +1,13 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
-
+from django.urls import reverse
 
 # after creating a model, we need to create migrations to make the..
 # ...python execute this
 # Create your models here.
 # it is a child of moderls.models
+
+
 class Book(models.Model):
     title = models.CharField(max_length=50)
     rating = models.IntegerField(
@@ -13,6 +15,9 @@ class Book(models.Model):
     )
     author = models.CharField(null=True, max_length=100)
     is_bestselling = models.BooleanField(default=False)
+
+    def get_absolute_url(self):
+        return reverse("book-detail", args=[self.id])  # type: ignore
 
     def __str__(self) -> str:
         return f"{self.title} ({self.rating})"
